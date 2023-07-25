@@ -9,6 +9,7 @@ export default function intercept(): void {
 	axios.defaults.baseURL = Config.BASE_URL;
 	let isRefreshing = false;
 	let subscribers: Array<(value: string) => void> = [];
+	//commit account check
 
 	axios.interceptors.request.use(async req => {
 		const {
